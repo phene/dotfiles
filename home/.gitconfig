@@ -11,7 +11,7 @@
   co = checkout
   undo = reset --hard
   rco = !sh -c 'grb track $1 && git co $1' -
-  work = !sh -c 'git rco $1 && git pull && rake db:demo:import && rake db:test:clone && touch tmp/restart.txt' -
+  work = !sh -c 'git rco $1 && git pull && rake demo:import && rake db:test:clone && touch tmp/restart.txt' -
   wipe = !sh -c 'git undo && git clean -f'
   rlist = branch -r
   l =  log --pretty=oneline --relative-date

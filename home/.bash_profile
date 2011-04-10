@@ -13,8 +13,8 @@ alias start_dev='start_memcached && start_nginx && start_solr'
 alias ttr='touch tmp/restart.txt'
 alias reload='~/.bash_profile'
 
-echo "Load other scripts"
+echo "Loading other scripts"
 
+[[ -f /opt/local/etc/bash_completion ]] && source /opt/local/etc/bash_completion
 [[ -f $HOME/.git-bash-prompt.sh ]] && source $HOME/.git-bash-prompt.sh
-[[ -f $HOME/.git-completion.sh ]] && source $HOME/.git-completion.sh
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

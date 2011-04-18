@@ -4,15 +4,16 @@
 [core]
   editor = mate -w
   pager = "less -RciqMSj5"
+  excludefile = ~/.gitignore
 [alias]
   put = push origin HEAD
   find = branch -r --contains 
   done = commit -a -m
   co = checkout
   undo = reset --hard
-  rco = !sh -c 'grb track $1 && git co $1' -
-  work = !sh -c 'git rco $1 && git pull && bundle install && rake demo:import && rake db:test:clone && touch tmp/restart.txt' -
-  wipe = !sh -c 'git undo && git clean -f'
+  rco = ! sh -c 'grb track $0 && git co $0'
+  work = ! sh -c 'git rco $0 && git pull && bundle install && rake demo:import && rake db:test:clone && touch tmp/restart.txt'
+  wipe = ! sh -c 'git undo && git clean -f'
   rlist = branch -r
   l =  log --pretty=oneline --relative-date
   ll = log --summary --stat --pretty=oneline --relative-date

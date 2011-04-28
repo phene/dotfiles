@@ -14,6 +14,7 @@
   rco = ! sh -c 'grb track $0 && git co $0'
   work = ! sh -c 'git rco $0 && git pull && bundle install && rake demo:import && rake db:test:clone && touch tmp/restart.txt'
   wipe = ! sh -c 'git undo && git clean -f'
+  list = ! sh -c 'git branch -r --merged origin/$0'
   rlist = branch -r
   l =  log --pretty=oneline --relative-date
   ll = log --summary --stat --pretty=oneline --relative-date

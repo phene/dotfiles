@@ -1,7 +1,7 @@
 
 echo "Assigning environment variables"
 
-export PATH=/bin:~/projects/node/installation/bin:~/projects/node/installation/lib:/opt/local/air_sdk/bin:/opt/local/bin:/opt/local/sbin/:$PATH
+export PATH=/bin:~/projects/node/installation/bin:~/projects/node/installation/lib:/opt/local/airsdk/bin:/opt/local/bin:/opt/local/sbin/:$PATH
 export EDITOR='mate'
 export ELASTICSEARCH_HOST=localhost:9200
 

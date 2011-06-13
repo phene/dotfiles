@@ -15,6 +15,8 @@
   work = ! sh -c 'git rco $0 && git pull && bundle install && rake demo:import && rake db:test:clone && touch tmp/restart.txt'
   wipe = ! sh -c 'git undo && git clean -f'
   list = ! sh -c 'git branch -r --merged origin/$0'
+  trim = ! sh -c 'git diff --name-only --diff-filter=D -z | xargs -0 git rm'
   rlist = branch -r
+  to-staging = ! sh -c 'git pull && git put && git co staging && git pull && git pull origin $0 && git put && git co $0'
   l =  log --pretty=oneline --relative-date
   ll = log --summary --stat --pretty=oneline --relative-date

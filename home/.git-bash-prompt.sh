@@ -86,4 +86,4 @@ git_bash_prompt ()
         fi
 }
 # \h:\W \u\$
-PS1='\h:\W \u$(git_bash_prompt)\$ '
+

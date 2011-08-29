@@ -4,6 +4,9 @@ echo "Assigning environment variables"
 export PATH=/bin:~/projects/node/installation/bin:~/projects/node/installation/lib:/opt/local/airsdk/bin:/opt/local/bin:/opt/local/sbin/:$PATH
 export EDITOR='mate'
 export ELASTICSEARCH_HOST=localhost:9200
+export CLICOLOR=1
+export LS_OPTIONS='--auto'
+export PS1='\h:\W $(git_bash_prompt)\$ '
 
 alias start_nginx='sudo /opt/nginx/sbin/nginx'
 alias start_memcached='rake memcached:start'

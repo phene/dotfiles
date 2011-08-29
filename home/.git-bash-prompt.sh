@@ -8,6 +8,7 @@ $ {
   g
   s/Untracked files:/\?/
   s/Changed but not updated/\*/
+  s/Changes not staged for commit/\*/
   s/Changes to be committed/\^/
   s/[^\^\?*]//g
   p

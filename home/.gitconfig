@@ -12,7 +12,7 @@
   co = checkout
   undo = reset --hard
   rco = ! sh -c 'grb track $0 && git co $0'
-  work = ! sh -c 'git rco $0 && git pull && if [ -f .rvmrc ]; then source .rvmrc; fi && bundle install --local && rake demo:import && rake db:test:clone && touch tmp/restart.txt'
+  work = "! sh -c 'echo \"Setting up $0 for work\" && git rco $0 && git pull && if [ -f .rvmrc ]; then source .rvmrc; fi && bundle install --local && rake demo:import && rake db:test:clone && touch tmp/restart.txt'"
   wipe = ! sh -c 'git undo && git clean -f'
   trim = ! sh -c 'git diff --name-only --diff-filter=D -z | xargs -0 git rm'
   list = ! sh -c 'git branch -r --merged origin/$0'
